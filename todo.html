@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container w-96 mx-auto">
+      <div class="header">
+        <h1 class="text-center mt-5 text-3xl text-error font-bold">To Do List 📚</h1>
+      </div>
+      <div class="main mt-5 w-96 mx-auto">
+        <div class="w-96 mx-auto flex">
+          <input
+            id="input-date"
+            type="text"
+            placeholder="date"
+            class="input input-bordered input-success w-full max-w-xs me-2"
+          />
+          <input
+            id="input-value"
+            type="text"
+            placeholder="Task"
+            class="input input-bordered input-success w-full max-w-xs me-2"
+          />
+          <button id="task-btn" class="btn btn-outline btn-success">Add Task</button>
+        </div>
+        <div class=" w-96 mx-auto my-4 flex">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Task</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="content-container">
+              <!-- contents from user -->
+            </tbody>
+          </table>
+          <div class="text-end">
+            <button id="clear-btn" class="btn btn-error w-[120px]">Clear All</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/todo.js"></script>
+  </body>
+</html>
